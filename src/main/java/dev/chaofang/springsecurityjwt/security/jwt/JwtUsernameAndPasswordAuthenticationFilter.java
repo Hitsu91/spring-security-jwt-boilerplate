@@ -66,6 +66,6 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
 
         response.addHeader(jwtConfig.getAuthorizationHeader(), jwtConfig.getTokenPrefix() + token);
         response.setContentType("application/json");
-        response.getWriter().append("{ \"jwt\": ").append(jwtConfig.getTokenPrefix()).append(token).append("}");
+        response.getWriter().append("{ \"jwt\": \"").append(jwtConfig.getTokenPrefix()).append(token).append("\" }");
     }
 }
